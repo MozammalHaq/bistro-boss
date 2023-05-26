@@ -1,8 +1,9 @@
-
+import {Link} from "react-router-dom"
 
 const NavBar = () => {
     const navOptions = <>
-        <li>Home</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/menu">Menu</Link></li>
     </>
     return (
         <div>
