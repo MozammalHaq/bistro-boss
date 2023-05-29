@@ -12,7 +12,7 @@ import '@smastrom/react-rating/style.css'
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('reviews.json')
+        fetch('http://localhost:5000/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     })
@@ -29,7 +29,7 @@ const Testimonials = () => {
                     >
                         <div className="flex flex-col items-center">
                             <Rating
-                                style={{ maxWidth: 180}}
+                                style={{ maxWidth: 180 }}
                                 value={review.rating}
                                 readOnly
                             />
