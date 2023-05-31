@@ -7,6 +7,8 @@ import Menu from "../pages/Menu/Menu/Menu";
 import OrderFood from "../pages/OrderFood/OrderFood";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../pages/Dashboard/MyCart/MyCart";
 
 
 const router = createBrowserRouter([
@@ -20,23 +22,33 @@ const router = createBrowserRouter([
             },
             {
                 path: "/menu",
-                element: <Menu/>
+                element: <Menu />
             },
             {
                 path: "/order",
-                element: <OrderFood/>
+                element: <OrderFood />
             },
             {
                 path: "/order/:category",
-                element: <OrderFood/>
+                element: <OrderFood />
             },
             {
                 path: '/login',
-                element: <Login/>
+                element: <Login />
             },
             {
                 path: '/signUp',
-                element: <SignUp/>
+                element: <SignUp />
+            }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <Dashboard />,
+        children: [
+            {
+                path: 'mycart',
+                element: <MyCart/>
             }
         ]
     }
