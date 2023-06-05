@@ -4,6 +4,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import SocialLogin from '../Shared/SocialLogin';
 
 
 const Login = () => {
@@ -102,6 +103,7 @@ const Login = () => {
                                 <button disabled={disabled} type="submit" className="btn btn-primary">Login</button>
                             </div>
                         </form>
+                        <SocialLogin/>
                     </div>
                 </div>
             </div>
